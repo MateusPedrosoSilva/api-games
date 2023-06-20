@@ -1,9 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateGameDto {
+export class CreatePlatformDto {
   @ApiProperty()
   name: string;
-
-  @ApiProperty()
-  plataform: string;
 }
