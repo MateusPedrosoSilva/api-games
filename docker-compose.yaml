@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 'process.env.LOCAL_DB_PORT:process.env.REMOTE_DB_PORT'
+    environment:
+      POSTGRES_USER: process.env.DB_USER
+      POSTGRES_PASSWORD: process.env.DB_PASS
+      POSTGRES_DB: process.env.DB_DATABASE
