@@ -11,6 +11,9 @@ export class Game {
   @Column()
   plataform: string;
 
+  @Column()
+  media: string;
+
   @Column({ type: 'boolean', default: false })
   have: boolean;
 
