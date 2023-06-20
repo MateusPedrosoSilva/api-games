@@ -17,4 +17,9 @@ export class GamesController {
   addGame(@Body() game: CreateGameDto) {
     return this.gamesServices.addGame(game);
   }
+
+  @Get('getPlayingGames')
+  getPlayingGames() {
+    return this.gamesServices.getPlayingGames();
+  }
 }

@@ -17,7 +17,7 @@ export class Game {
   @Column({ type: 'boolean', default: false })
   have: boolean;
 
-  @Column({ type: 'boolean', default: false })
+  @Column({ type: 'boolean' })
   playing: boolean;
 
   @Column({ type: 'boolean', default: false })
