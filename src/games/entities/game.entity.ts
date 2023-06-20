@@ -10,4 +10,16 @@ export class Game {
 
   @Column()
   plataform: string;
+
+  @Column({ type: 'boolean', default: false })
+  have: boolean;
+
+  @Column({ type: 'boolean', default: false })
+  playing: boolean;
+
+  @Column({ type: 'boolean', default: false })
+  done: boolean;
+
+  @Column({ type: 'boolean', default: false })
+  want: boolean;
 }
