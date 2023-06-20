@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('Informações para Portal do fornecedor')
-    .setDescription('API de consulta de informações do RMS do Grupo Líder')
+    .setTitle('GAMES API')
+    .setDescription('API for the games app')
     .setVersion(process.env.APP_VERSION)
     .build();
   const document = SwaggerModule.createDocument(app, config);
