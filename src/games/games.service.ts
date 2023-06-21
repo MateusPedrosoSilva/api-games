@@ -16,7 +16,9 @@ export class GamesService {
   }
 
   async addGame(game: CreateGameDto) {
-    const query = `insert into game (name, plataform, media, playing, have, done, want) values ('${game.name}', '${game.plataform}', '${game.media}', ${game.playing}, ${game.have}, ${game.done}, ${game.want})`;
+    const query = `insert into game (name, plataform, media, playing, have, done, want) 
+    values ('${game.name}', '${game.plataform}', '${game.media}', ${game.playing}, 
+    ${game.have}, ${game.done}, ${game.want})`;
     try {
       await this.games_db.query(query);
       return 'jogo adicionado com sucesso';
