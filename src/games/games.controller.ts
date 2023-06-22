@@ -25,4 +25,22 @@ export class GamesController {
   getPlayingGames() {
     return this.gamesServices.getPlayingGames();
   }
+
+  @Get('getDoneGames')
+  @ApiOperation({ summary: 'Buscar jogos que já concluiu' })
+  getDoneGames() {
+    return this.gamesServices.getDoneGames();
+  }
+
+  @Get('getWantedGames')
+  @ApiOperation({ summary: 'Buscar jogos que deseja' })
+  getWantedGames() {
+    return this.gamesServices.getWantedGames();
+  }
+
+  @Get('getHaveGames')
+  @ApiOperation({ summary: 'Buscar jogos que possui' })
+  getHaveGames() {
+    return this.gamesServices.getHaveGames();
+  }
 }

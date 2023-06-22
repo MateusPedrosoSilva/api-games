@@ -36,4 +36,34 @@ export class GamesService {
       return 'Erro ao buscar jogos que esta jogando. Error: ' + error;
     }
   }
+
+  async getDoneGames() {
+    const query = `select * from game where done = true`;
+    try {
+      const haveGames = await this.games_db.query(query);
+      return haveGames;
+    } catch (error) {
+      return 'Erro ao buscar jogos que possui. Error: ' + error;
+    }
+  }
+
+  async getWantedGames() {
+    const query = `select * from game where want = true`;
+    try {
+      const wantedGames = await this.games_db.query(query);
+      return wantedGames;
+    } catch (error) {
+      return 'Erro ao buscar jogos que deseja. Error: ' + error;
+    }
+  }
+
+  async getHaveGames() {
+    const query = `select * from game where have = true`;
+    try {
+      const haveGames = await this.games_db.query(query);
+      return haveGames;
+    } catch (error) {
+      return 'Erro ao buscar jogos que possui. Error: ' + error;
+    }
+  }
 }
